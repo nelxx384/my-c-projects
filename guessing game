@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <time.h>
+
+
+
+int main(){
+ 
+ srand(time(NULL));
+ int r=1+rand()% 101;
+ int num;
+ int tries=0;
+ printf("*** NUMBER GUESSING GAME ***\n");
+ do
+ {
+     printf("Guess a number between 1 - 100: ");
+     scanf("%d",&num);
+     tries++;
+     if(num<r)
+     printf("TOO LOW!\n");
+     else if(num>r)
+     printf("TOO HIGH!\n");
+     else
+     printf("CORRECT!\n");
+     
+ }
+ while (num!=r);
+printf("THE NUMBER GUESSED = %d and the correct num =%d\n TRIES= %d",num,r,tries);
+    
+    
+}
